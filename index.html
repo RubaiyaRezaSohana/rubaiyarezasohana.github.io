@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubaiya Reza Sohana</title>
+<meta name="description" content="Academic portfolio of Rubaiya Reza Sohana — Lecturer, Department of Computer Science and Engineering, Bangladesh University of Business and Technology (BUBT). Research in artificial intelligence, machine learning, deep learning, and medical imaging.">
+<meta name="author" content="Rubaiya Reza Sohana">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇧🇩</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg-2:#FAF8FD; --surface:#FAF8FD; --surface-2:#F3EEFA;
+    --line: rgba(30,20,50,0.10); --line-strong: rgba(30,20,50,0.20);
+    --text:#151221; --text-dim:#4B4657; --text-mute:#898396;
+    --purple:#5B21B6; --purple-mid:#7C3AED; --purple-soft:#6D28D9; --purple-dim:rgba(91,33,182,0.09); --purple-dim2:rgba(124,58,237,0.13);
+    --serif:'Fraunces', serif; --sans:'IBM Plex Sans', sans-serif; --mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--text); font-family:var(--sans);
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  .site{max-width:960px; margin:0 auto; padding:0 32px;}
+
+  .nav{
+    position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.90);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+  }
+  .nav-logo{font-family:var(--serif); font-size:18px; font-weight:600; letter-spacing:0.02em; color:var(--text);}
+  .nav-logo .dot{color:var(--purple);}
+  .nav-links{display:flex; gap:26px; font-size:13px; color:var(--text-dim); font-family:var(--mono);}
+  .nav-links a{display:inline-block; transition:color 0.18s ease, transform 0.18s ease, font-weight 0.18s ease;}
+  .nav-links a:hover{color:var(--purple); font-weight:700; transform:scale(1.1);}
+
+  .hero{
+    position:relative; padding:88px 32px 64px; overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{max-width:960px; margin:0 auto; position:relative;}
+  .hero-eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--purple-soft); margin-bottom:18px;
+  }
+  .hero-name{
+    font-family:var(--serif); font-weight:600; font-size:56px; line-height:1.05;
+    letter-spacing:-0.01em; max-width:600px; color:var(--text);
+    transition:color 0.2s ease; cursor:default;
+  }
+  .hero-name:hover{color:var(--purple);}
+  .hero-role{
+    margin-top:18px; font-size:16px; color:var(--text-dim); max-width:520px;
+  }
+  .hero-role strong{color:var(--text); font-weight:500;}
+  .hero-bio{
+    margin-top:20px; font-size:15px; color:var(--text-dim); max-width:600px; line-height:1.8;
+  }
+  .hero-links{display:flex; flex-wrap:wrap; gap:12px; margin-top:32px;}
+  .pill{
+    border:1px solid var(--line-strong); border-radius:100px; padding:10px 18px;
+    font-size:13px; font-family:var(--mono); font-weight:500; color:var(--text-dim);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+    background:#FFFFFF;
+  }
+  .pill:hover{
+    border-color:var(--purple); color:var(--purple); font-weight:700;
+    transform:scale(1.06); box-shadow:0 6px 18px rgba(109,40,217,0.20);
+  }
+  .pill-accent{background:linear-gradient(135deg, var(--purple), var(--purple-mid)); border-color:var(--purple); color:#FFFFFF; font-weight:600; box-shadow:0 4px 14px rgba(109,40,217,0.22);}
+  .pill-accent:hover{color:#FFFFFF; font-weight:700; transform:scale(1.06); box-shadow:0 8px 22px rgba(109,40,217,0.32); border-color:var(--purple-mid);}
+  .pill i{font-size:15px;}
+
+  .section{padding:56px 32px; border-bottom:1px solid var(--line);}
+  .section-header{display:flex; align-items:baseline; gap:16px; margin-bottom:32px;}
+  .section-title{
+    font-family:var(--serif); font-size:26px; font-weight:600; letter-spacing:-0.01em; color:var(--text);
+  }
+  .section-rule{flex:1; height:1px; background:var(--line);}
+
+  .timeline{display:flex; flex-direction:column; gap:0;}
+  .tl-item{
+    display:grid; grid-template-columns:120px 1fr; gap:24px; padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+  .tl-item:first-child{border-top:none;}
+  .tl-date{font-family:var(--mono); font-size:12px; color:var(--purple-mid); padding-top:3px;}
+  .tl-role{font-size:16px; font-weight:500; color:var(--text);}
+  .tl-org{font-size:14px; color:var(--purple); margin-top:2px;}
+  .tl-place{font-size:12px; color:var(--text-mute); margin-top:1px; font-family:var(--mono);}
+  .tl-desc{font-size:14px; color:var(--text-dim); margin-top:8px; max-width:600px;}
+
+  .edu-item{padding:26px 0; border-top:1px solid var(--line);}
+  .edu-item:first-child{border-top:none;}
+  .edu-top{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;}
+  .edu-degree{font-family:var(--serif); font-size:19px; font-weight:600; color:var(--text);}
+  .edu-school{font-size:13px; color:var(--text-mute); margin-top:4px; font-family:var(--mono);}
+  .edu-gpa{font-family:var(--mono); font-size:13px; color:var(--purple); background:var(--purple-dim); padding:5px 12px; border-radius:100px; white-space:nowrap;}
+  .thesis-block{margin-top:16px; padding:18px 20px; background:var(--surface); border:1px solid var(--line); border-radius:6px; position:relative;}
+  .thesis-block::before{content:""; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--purple-mid); border-radius:6px 0 0 6px;}
+  .thesis-label{font-family:var(--mono); font-size:10.5px; color:var(--purple-mid); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:6px;}
+  .thesis-title{font-size:14.5px; font-weight:500; color:var(--text); margin-bottom:8px; line-height:1.5;}
+  .thesis-desc{font-size:13.5px; color:var(--text-dim); line-height:1.7;}
+  .thesis-tools{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px;}
+  .tool-tag{
+    font-family:var(--mono); font-size:11px; color:var(--purple);
+    background:var(--purple-dim2); padding:3px 9px; border-radius:4px;
+  }
+
+  .pub-item{
+    display:grid; grid-template-columns:36px 1fr; gap:18px; padding:4px 0;
+  }
+  .pub-num{
+    font-family:var(--mono); font-size:12px; color:var(--purple); background:var(--purple-dim2);
+    width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  }
+  .pub-body{font-size:14.5px; color:var(--text-dim); line-height:1.7;}
+  .pub-body strong{color:var(--purple); font-weight:600;}
+  .pub-venue{font-family:var(--mono); font-size:12px; color:var(--text-mute); margin-top:6px;}
+  .first-author-note{
+    font-family:var(--mono); font-size:11px; color:var(--purple); margin-top:12px;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .pub-summary-block{margin-top:16px; padding:18px 20px; background:var(--surface); border:1px solid var(--line); border-radius:6px; position:relative;}
+  .pub-summary-block::before{content:""; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--purple-mid); border-radius:6px 0 0 6px;}
+  .pub-summary-label{font-family:var(--mono); font-size:10.5px; color:var(--purple-mid); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px;}
+  .pub-summary-text{font-size:13.5px; color:var(--text-dim); line-height:1.75;}
+
+  .skills-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px 32px;}
+  .skill-card-label{font-family:var(--mono); font-size:11px; color:var(--purple); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px;}
+  .skill-tags{display:flex; flex-wrap:wrap; gap:7px;}
+  .skill-tag{
+    font-size:12.5px; color:var(--text-dim); border:1px solid var(--line-strong);
+    padding:5px 11px; border-radius:5px;
+  }
+
+  .simple-list{display:flex; flex-direction:column; gap:0;}
+  .simple-item{padding:16px 0; border-top:1px solid var(--line); display:flex; gap:14px; align-items:flex-start;}
+  .simple-item:first-child{border-top:none;}
+  .simple-icon{color:var(--purple); font-size:16px; margin-top:3px; flex-shrink:0;}
+  .simple-title{font-size:14.5px; font-weight:500; color:var(--text);}
+  .simple-meta{font-size:13px; color:var(--text-dim); margin-top:3px; line-height:1.65;}
+  .simple-year{font-family:var(--mono); font-size:11px; color:var(--purple-mid); margin-left:8px;}
+
+  .contact-grid{display:flex; flex-wrap:wrap; gap:14px 40px; margin-bottom:8px;}
+  .contact-item{display:flex; flex-direction:column; gap:4px;}
+  .contact-label{font-family:var(--mono); font-size:11px; color:var(--text-mute); text-transform:uppercase; letter-spacing:0.05em;}
+  .contact-value{font-size:15px; color:var(--purple);}
+
+  .footer{
+    text-align:center; padding:36px 32px; font-family:var(--mono);
+    font-size:12px; color:var(--text-mute);
+  }
+
+  @media(max-width:640px){
+    .hero{padding:64px 20px 44px;}
+    .hero-name{font-size:38px;}
+    .nav{padding:14px 20px; flex-direction:column; gap:10px;}
+    .nav-links{gap:16px; flex-wrap:wrap; justify-content:center;}
+    .section{padding:40px 20px;}
+    .site{padding:0 20px;}
+    .skills-grid{grid-template-columns:1fr;}
+    .tl-item{grid-template-columns:1fr; gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">Rubaiya<span class="dot">.</span></span>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#publications">Publications</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Lecturer · AI &amp; ML Researcher</p>
+    <h1 class="hero-name">Rubaiya Reza<br>Sohana</h1>
+    <p class="hero-role">
+      <strong>Lecturer, Department of Computer Science and Engineering</strong><br>
+      Bangladesh University of Business and Technology (BUBT), Dhaka
+    </p>
+    <p class="hero-bio">
+      Researcher in artificial intelligence, machine learning, and deep learning, with published and thesis work spanning medical image analysis — blood cell detection and neurodegenerative disease classification — and computer vision applications in agriculture. Focused on attention-enhanced, lightweight architectures, with an aim to contribute to funded, impact-driven research.
+    </p>
+    <div class="hero-links">
+      <a class="pill" href="https://bubt.edu.bd/department/department-of-computer-science-engineering/faculty/profile/RRSA" target="_blank" rel="noopener"><i class="ti ti-id-badge"></i> Faculty Profile</a>
+      <a class="pill" href="https://www.researchgate.net/profile/Rubaiya-Reza-Sohana" target="_blank" rel="noopener"><i class="ti ti-flask"></i> ResearchGate</a>
+      <a class="pill" href="https://scholar.google.com/citations?user=qgLVqnIAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ti ti-book"></i> Google Scholar</a>
+      <a class="pill" href="https://www.linkedin.com/in/rubaiyarezasohana/" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<div class="site">
+
+  <section class="section" id="experience">
+    <div class="section-header">
+      <span class="section-title">Experience</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">Jan 2025 –<br>Present</div>
+        <div>
+          <div class="tl-role">Lecturer, Department of Computer Science and Engineering</div>
+          <div class="tl-org">Bangladesh University of Business and Technology (BUBT)</div>
+          <div class="tl-place">Dhaka, Bangladesh</div>
+          <p class="tl-desc">Teaching undergraduate courses including Software Engineering, Computer Architecture, System Analysis and Design, Artificial Intelligence and Expert Systems, and Database Systems, alongside curriculum design and student project supervision.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2024 –<br>Aug 2024</div>
+        <div>
+          <div class="tl-role">Internship — Junior Programmer</div>
+          <div class="tl-org">Relief Validation Limited</div>
+          <div class="tl-place">Gulshan, Dhaka, Bangladesh</div>
+          <p class="tl-desc">Worked on a secure e-sign platform, gaining hands-on experience with PKI, encryption, and cryptography, and contributed to Django-based project development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-header">
+      <span class="section-title">Education</span>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-top">
+        <div>
+          <div class="edu-degree">Master of Science in Computer Science and Engineering</div>
+          <div class="edu-school">Jahangirnagar University, Savar, Dhaka · 2021 – 2022</div>
+        </div>
+        <div class="edu-gpa">CGPA 3.75 / 4.00</div>
+      </div>
+      <div class="thesis-block">
+        <div class="thesis-label">Thesis</div>
+        <div class="thesis-title">Automated counting of blood cells using machine learning techniques</div>
+        <p class="thesis-desc">Blood cell counts are a cornerstone of routine diagnostics, yet manual microscopy remains slow and vulnerable to human error. This thesis develops an automated detection pipeline built on the YOLOv7 deep learning model to identify, count, and classify red blood cells, white blood cells, and platelets directly from blood smear images. A custom-curated dataset, paired with targeted image preprocessing, feature extraction, and data augmentation, trains the model to recognize cell types reliably even under variable smear quality. The resulting system reaches approximately 97% accuracy — a faster, more consistent alternative to manual counting that points toward broader integration of machine learning in clinical hematology.</p>
+        <div class="thesis-tools">
+          <span class="tool-tag">Anaconda</span><span class="tool-tag">Jupyter Notebook</span><span class="tool-tag">YOLOv7</span><span class="tool-tag">GitHub</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-top">
+        <div>
+          <div class="edu-degree">Bachelor of Science in Computer Science and Engineering</div>
+          <div class="edu-school">Jahangirnagar University, Savar, Dhaka · 2018 – 2021</div>
+        </div>
+        <div class="edu-gpa">CGPA 3.73 / 4.00</div>
+      </div>
+      <div class="thesis-block">
+        <div class="thesis-label">Thesis</div>
+        <div class="thesis-title">Transfer learning-based CNN model for Alzheimer's disease classification, with Android assistance</div>
+        <p class="thesis-desc">Alzheimer's disease progressively erodes brain tissue, driving memory loss and cognitive decline that, without timely diagnosis and care, can prove fatal — making early, accurate staging from MRI scans essential. This project builds a transfer learning-based CNN, using VGG16 as its pre-trained backbone, to classify four stages of the disease: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented. The model reaches 97% classification accuracy and is paired with a companion Android application that extends its reach beyond the lab — offering screening tests, note-taking, medicine reminders, object detection, and personalized health guidance for patients and caregivers.</p>
+        <div class="thesis-tools">
+          <span class="tool-tag">Anaconda</span><span class="tool-tag">TensorFlow</span><span class="tool-tag">VGG16</span><span class="tool-tag">Android Studio</span><span class="tool-tag">Firebase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="research-grant">
+    <div class="section-header">
+      <span class="section-title">Research Grant</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="simple-list">
+      <div class="simple-item">
+        <i class="ti ti-award simple-icon"></i>
+        <div>
+          <div class="simple-title">NST Fellowship <span class="simple-year">2023 – 2024</span></div>
+          <div class="simple-meta">Awarded the National Science and Technology Fellowship for master's thesis research on counting red and white blood cells using machine learning techniques.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="publications">
+    <div class="section-header">
+      <span class="section-title">Publications</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">I</div>
+      <div class="pub-body">
+        <strong>R. R. Sohana</strong>, M. S. Ahmed, S. B. Shahid, and R. H. Hridoy, "Robust Blood Cell Detection and Counting Using Efficient Channel Attention-Integrated YOLOv10."
+        <div class="pub-venue">IEEE WIECON-ECE, Dhaka, Bangladesh, 2026, pp. 1090 – 1095</div>
+        <div class="first-author-note"><i class="ti ti-star"></i> First author</div>
+      </div>
+    </div>
+    <div class="pub-summary-block">
+      <div class="pub-summary-label">Summary</div>
+      <p class="pub-summary-text">Automated blood cell analysis plays a crucial role in early disease diagnosis, yet traditional microscopic examination remains labor-intensive and prone to subjective variability. Building on earlier YOLOv7-based work from her master's thesis, this study proposes an enhanced YOLOv10-based detection framework integrated with Efficient Channel Attention (ECA) to classify and count red blood cells, white blood cells, and platelets from peripheral blood smear images, with ECA improving channel-wise feature selection without added computational overhead. An improved preprocessing pipeline using Contrast Limited Adaptive Histogram Equalization (CLAHE) further enhances local image contrast, refining the augmentation and feature-extraction approach used in the original thesis. The final model achieves approximately 97% accuracy across all classes, demonstrating strong robustness in both detection and categorization and highlighting the potential of attention-enhanced, lightweight architectures for reliable, rapid clinical hematological analysis.</p>
+    </div>
+  </section>
+
+  <section class="section" id="scholarships">
+    <div class="section-header">
+      <span class="section-title">Scholarships</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="simple-list">
+      <div class="simple-item">
+        <i class="ti ti-school simple-icon"></i>
+        <div>
+          <div class="simple-title">General Grad Scholarship <span class="simple-year">2021</span></div>
+          <div class="simple-meta">Government General Scholarship awarded for outstanding B.Sc academic performance.</div>
+        </div>
+      </div>
+      <div class="simple-item">
+        <i class="ti ti-school simple-icon"></i>
+        <div>
+          <div class="simple-title">Merit Scholarship, Dept. of CSE, Jahangirnagar University</div>
+          <div class="simple-meta">Awarded each academic year (2018 – 2021) for maintaining top performance among undergraduate students.</div>
+        </div>
+      </div>
+      <div class="simple-item">
+        <i class="ti ti-school simple-icon"></i>
+        <div>
+          <div class="simple-title">Dhaka Board SSC Talent Pool Scholarship <span class="simple-year">2015</span></div>
+          <div class="simple-meta">Awarded by the Government of Bangladesh for outstanding academic performance; ranked 20th among female students in Dhaka.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span class="section-title">Skills</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-grid">
+      <div><div class="skill-card-label">Programming</div><div class="skill-tags"><span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">PHP</span><span class="skill-tag">Kotlin</span></div></div>
+      <div><div class="skill-card-label">Frameworks</div><div class="skill-tags"><span class="skill-tag">Laravel</span><span class="skill-tag">Django</span></div></div>
+      <div><div class="skill-card-label">Tools</div><div class="skill-tags"><span class="skill-tag">PyCharm</span><span class="skill-tag">Google Colab</span><span class="skill-tag">Anaconda</span><span class="skill-tag">VS Code</span><span class="skill-tag">Android Studio</span></div></div>
+      <div><div class="skill-card-label">Database</div><div class="skill-tags"><span class="skill-tag">MySQL</span></div></div>
+      <div><div class="skill-card-label">Documentation</div><div class="skill-tags"><span class="skill-tag">LaTeX (Overleaf)</span><span class="skill-tag">GitHub</span></div></div>
+      <div><div class="skill-card-label">Design</div><div class="skill-tags"><span class="skill-tag">Photoshop</span><span class="skill-tag">Illustrator</span><span class="skill-tag">Canva</span><span class="skill-tag">Blender</span><span class="skill-tag">Figma</span></div></div>
+      <div><div class="skill-card-label">Web</div><div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span><span class="skill-tag">Django</span></div></div>
+      <div><div class="skill-card-label">Office</div><div class="skill-tags"><span class="skill-tag">Word</span><span class="skill-tag">Excel</span><span class="skill-tag">PowerPoint</span></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="achievements">
+    <div class="section-header">
+      <span class="section-title">Achievements</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="simple-list">
+      <div class="simple-item">
+        <i class="ti ti-medal simple-icon"></i>
+        <div>
+          <div class="simple-title">Gold Award, 1st International Poster Competition on SDGs in Developing Countries</div>
+          <div class="simple-meta">Organized by UniV, for the poster "Building a Rich Community DHR System and Using ML for Decision Making: Ensuring Enriched Health Facilities and Eradicating Health Myths."</div>
+        </div>
+      </div>
+      <div class="simple-item">
+        <i class="ti ti-trophy simple-icon"></i>
+        <div>
+          <div class="simple-title">6th place, Red White Innovation Competition</div>
+          <div class="simple-meta">Among around 50 teams — proposed a model to organize and expand access to medical services across Bangladesh.</div>
+        </div>
+      </div>
+      <div class="simple-item">
+        <i class="ti ti-users simple-icon"></i>
+        <div>
+          <div class="simple-title">National Girls Programming Contest <span class="simple-year">2019</span></div>
+          <div class="simple-meta">Team member in the preliminary online coding test; team advanced to the next round, ranked around 130th.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leadership">
+    <div class="section-header">
+      <span class="section-title">Leadership &amp; Volunteer Work</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="simple-list">
+      <div class="simple-item">
+        <i class="ti ti-briefcase simple-icon"></i>
+        <div>
+          <div class="simple-title">Documentation Secretary <span class="simple-year">Dec 2019 – Jun 2022</span></div>
+          <div class="simple-meta">Jahangirnagar Computer Club — maintained organizational paper work, guided executive members, and organized CSE Fest 2019.</div>
+        </div>
+      </div>
+      <div class="simple-item">
+        <i class="ti ti-heart-handshake simple-icon"></i>
+        <div>
+          <div class="simple-title">Volunteer <span class="simple-year">Jan 2020</span></div>
+          <div class="simple-meta">Bangladesh Open Source Network — assisted candidates in the Ada Lovelace Celebration Contest, fostering a collaborative environment.</div>
+        </div>
+      </div>
+      <div class="simple-item">
+        <i class="ti ti-notes simple-icon"></i>
+        <div>
+          <div class="simple-title">Scribe <span class="simple-year">Nov 2019</span></div>
+          <div class="simple-meta">Bangladesh Open Source Network — documented session notes and organized them in a clear, professional format.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="certifications">
+    <div class="section-header">
+      <span class="section-title">Certifications</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-grid">
+      <div><div class="skill-card-label">HackerRank</div><div class="skill-tags"><span class="skill-tag">Python (Basic)</span><span class="skill-tag">Problem Solving (Basic)</span></div></div>
+      <div><div class="skill-card-label">Coursera</div><div class="skill-tags"><span class="skill-tag">Programming for Everybody</span><span class="skill-tag">Python Data Structures</span><span class="skill-tag">Using Python to Access Web Data</span><span class="skill-tag">Intro to Applied Machine Learning</span><span class="skill-tag">Neural Networks and Deep Learning</span></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="border-bottom:none;">
+    <div class="section-header">
+      <span class="section-title">Contact</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item"><span class="contact-label">Official email</span><a class="contact-value" href="mailto:rubaiyarezasohana@bubt.edu.bd">rubaiyarezasohana@bubt.edu.bd</a></div>
+      <div class="contact-item"><span class="contact-label">Personal email</span><a class="contact-value" href="mailto:rubaiyarezasohana1971@gmail.com">rubaiyarezasohana@gmail.com</a></div>
+      <div class="contact-item"><span class="contact-label">Office location</span><span class="contact-value">Building 1 (602), BUBT, Rupnagar, Mirpur-2, Dhaka-1216, Bangladesh</span></div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  &copy; 2026 Rubaiya Reza Sohana
+</footer>
+
+</body>
+</html>
